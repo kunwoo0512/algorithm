@@ -1,23 +1,29 @@
 package bronze.lev1;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.util.Arrays;
 
 public class baekjoon10989 {
+    public static void main(String[] args) throws IOException {
 
-    public static void main(String[] args) {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
-        Scanner in = new Scanner(System.in);
+        int N = Integer.parseInt(br.readLine());
+        int[] arr = new int[N];
 
-        int up = in.nextInt();		// A
-        int down = in.nextInt();	// B
-        int length = in.nextInt(); 	// C
-
-        int day = (length - down) / (up - down);
-
-        // 나머지가 있을 경우 (잔여 블럭이 있을 경우)
-        if ((length - down) % (up - down) != 0) {
-            day++;
+        for(int i = 0; i < N; i++){
+            arr[i] = Integer.parseInt(br.readLine());
         }
-        System.out.println(day);
+
+        Arrays.sort(arr);
+
+        for(int i = 0; i < N; i++){
+            sb.append(arr[i]).append('\n');
+        }
+
+        System.out.println(sb);
     }
 }
