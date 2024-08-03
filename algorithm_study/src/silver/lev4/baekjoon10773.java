@@ -33,7 +33,7 @@ public class baekjoon10773 {
         System.out.println(sum);
 
         //stack 말고 자체구현하여 푸는 방법
-        
+
 //        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 //        int n = Integer.parseInt(br.readLine());
 //        int[] list = new int[n];
